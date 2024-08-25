@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.Range;
 
 import lombok.Data;
 
+
 @Data
 public class FizzBazzForm {
 
@@ -13,7 +14,7 @@ public class FizzBazzForm {
 	int bazz;
 
 	int fizzBazz;
-	
+
 	String name;
 
 }
