@@ -27,7 +27,7 @@ public class FizzBazzService {
 				fizzBazzDetail.add("fizz");
 
 			} else {
-				fizzBazzDetail.add("");
+				fizzBazzDetail.add(" ");
 			}
 		}
 		return fizzBazzDetail;

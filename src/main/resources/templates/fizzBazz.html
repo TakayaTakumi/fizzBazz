@@ -5,6 +5,8 @@
 	<html xmlns:th="http://www.thymeleaf.org">
 	<meta charset="UTF-8">
 	</meta>
+	<link rel="stylesheet" th:href="@{/css/fizzBazz/fizzBazz.css}">
+
 	<script th:src="@{/webjars/jquery/jquery.min.js}" defer></script>
 	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" defer></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -14,10 +16,17 @@
 </head>
 
 <body>
-		<table border="1">
-				<li th:text="${resultNumbers}"></li>
-				<li th:text="${fizzBazzList}"></li>
-		</table>
+	<div th:each="item :*{resultNumbers}" class="a">
+		<li th:text="${item}"></li>
+	</div>
+	<div class="s">
+		<div th:each="a :*{fizzBazzList}">
+			<li th:text="${a}"></li>
+		</div>
+	</div>
+
+	<!--			<li th:text="${resultNumbers}"></li>-->
+	<!--			<li th:text="${fizzBazzList}"></li>-->
 </body>
 
 </html>
