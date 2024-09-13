@@ -27,9 +27,9 @@ public class fizzBazzController {
 
 	@GetMapping("/Home")
 	public String getFizzBazzHome(@ModelAttribute FizzBazzForm form, Model model) {
-		List<Integer> getpastData = fizzBazzService.getPastData();
+		List<Integer> getPastData = fizzBazzService.getPastData();
 
-		model.addAttribute("getpastData", getpastData);
+		model.addAttribute("getPastData", getPastData);
 
 		return "Home";
 	}
