@@ -1,10 +1,9 @@
 package com.example.demo.model;
 
+import lombok.Data;
+
+@Data
 public class fizzBazzModel {
-	int fizz;
-
-	int bazz;
-
-	int FizzBazz;
+	Integer fizz;
 
 }
