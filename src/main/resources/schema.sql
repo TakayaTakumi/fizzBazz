@@ -1,6 +1,4 @@
-CREATE TABLE IF NOT EXISTS employee
+CREATE TABLE IF NOT EXISTS m_fizzbazz
 (
-   fizz INT,
-   bazz INT,
-   fizzBazz INT
+   fizz INT
 );
