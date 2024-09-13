@@ -1,2 +1,4 @@
-INSERT INTO employee(fizz, bazz, fizzBazz)
-VALUES(1,3,95);
+INSERT INTO m_fizzbazz (fizz) 
+VALUES (1),
+(40),
+(100);
