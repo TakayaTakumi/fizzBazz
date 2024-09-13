@@ -18,19 +18,15 @@ import com.example.demo.service.FizzBazzService;
 
 @Controller
 public class fizzBazzController {
-
 	@Autowired
 	FizzBazzService fizzBazzService;
-
 	@Autowired
 	ModelMapper modelMapper;
 
 	@GetMapping("/Home")
 	public String getFizzBazzHome(@ModelAttribute FizzBazzForm form, Model model) {
-		List<Integer> getPastData = fizzBazzService.getPastData();
-
-		model.addAttribute("getPastData", getPastData);
-
+		List<Integer> getpastData = fizzBazzService.getPastData();
+		model.addAttribute("getpastData", getpastData);
 		return "Home";
 	}
 
@@ -43,11 +39,8 @@ public class fizzBazzController {
 		}
 		List<Integer> resultNumbers = fizzBazzService.intvalue(fizz);
 		List<String> fizzBazzList = fizzBazzService.fizzBazzResult(fizz);
-
 		model.addAttribute("resultNumbers", resultNumbers);
 		model.addAttribute("fizzBazzList", fizzBazzList);
-
 		return "fizzBazz";
 	}
-
 }
