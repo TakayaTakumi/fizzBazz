@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+ul.display-block {
+	display: block;
+	width: 50px;
+}
+
+
+div.display-flex {
+	display: flex;
+}
+
+ul {
+	list-style: none;
+}
+
+p {
+	display: inline;
+}
+
+.link {
+
+	color: blue;
+	text-decoration: none;
+}
+
+.is-active {
+	color: yellow;
+}
