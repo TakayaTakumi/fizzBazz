@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.demo.service.Service;
+import com.example.demo.service.FizzBazzService;
 
 @Controller
 public class fizzBazzController {
 
-	Service service;
+	FizzBazzService service;
 
 	ModelMapper modelMapper;
 
@@ -23,10 +23,10 @@ public class fizzBazzController {
 
 	@PostMapping("/Home")
 	public String postFizzBazzHome(@RequestParam("text1") int fizz, Model model) {
-	    System.out.println(fizz);
+		System.out.println(fizz);
 
-//		List<String> fizzBazzList = service.intvalue(fizz);
-		model.addAttribute("initialValue",  service.intvalue(fizz));
+		//		List<String> fizzBazzList = service.intvalue(fizz);
+		model.addAttribute("initialValue", service.intvalue(fizz));
 
 		return "fizzBazz";
 	}
