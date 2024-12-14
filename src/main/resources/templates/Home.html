@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<html xmlns:th="http://www.thymeleaf.org">
 	<meta charset="UTF-8">
 	</meta>
+	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" defer></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
 	<title>Insert title here</title>
 </head>
 
 <body>
-	<form method="post" action="/Home">
-		<input type="number" name="text1" />
+
+	<form method="post" action="/Home" th:object="${fizzBazzForm}">
+		<input type="number" name="text1" th:field="*{fizz}" th:erroerclass="is-invalid" />
+		<div class="invalid-feedback" th:errors="*{fizz}"></div>
 		<input type="submit" value="クリック">
 	</form>
+	<h3>過去3回分の指定値</h3>
+	<div th:each="item :*{getpastData}">
+		<li th:text="${item.fizz}"></li>
+	</div>
 </body>
 
 </html>
